@@ -15,7 +15,8 @@ main.c have an problem:
   I couldn't understand why it happend.
 
 
-==== How to Run main.c ====
+==== How to Run main.c ====  
+
 1. You need to prepare an webm file, and rename it to "input.webm" with same folder to main.c
 2. compile main.c with command: g++ -g -Wall main.c -o main $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-base-1.0)
 3. You will see the execuable file "main" at the current folder after step 2.
@@ -51,7 +52,10 @@ Setup message bus success....
 End-Of-Stream reached.
 Try to end pipeline
 
-==== Shell Script Usage ====
+8. If you want to exit program before it ends, you can press Ctrl+\
+
+==== Shell Script Usage ====  
+
 1. play_audio.sh: coulde play webm only contains audio: sh play_audio.sh audio_file_name
 2. play_video.sh: coulde play webm only contains video: sh play_video.sh video_file_name
 3. play_both.sh:  coulde play webm contains audio and video: sh play_both.sh webm_file_name
