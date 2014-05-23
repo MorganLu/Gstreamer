@@ -16,19 +16,18 @@ main.c have an problem:
 
 Pipeline Graph
 =========
-+----------------+		+-------------------+	     +----------+	  +-------------------+		
-|		   	     |	    |				 audio_0-->sink queue src-->audio_0				  |
-| filesrc	    src-->sink matroskademux	|		 +----------+     |		matroskamux	  |
-| (./input.webm) |		|				 video_0-->sink queue src-->video_0				  |
-+----------------+		+-------------------+		 +----------+	  +--------src--------+
-																				|
-																				|
-																				V
-																	  +--------sink----------+	 +-----------+
-																	  |					src_0-->src	fakesink |
-																	  |	 output-selector     |	 +-----------+
-																	  |					src_1-->src filesink |
-																	  +-----------------------+	 +-----------+
++----------------+	+-------------------+	     +----------+	  +-------------------+		
+|		 		 |	|		 		 audio_0-->sink queue src-->audio_0				  |
+| filesrc	src-->sink matroskademux	|		 +----------+     |		matroskamux	  |
+| (./input.webm) |	|				 video_0-->sink queue src-->video_0				  |
++----------------+	+-------------------+		 +----------+	  +--------src--------+
+																			|
+																			|
+																			V
+																  +--------sink-------+	  +---------------+
+																  |					src_0-->src	fakesink  |																	  							  |	 output-selector  |	  +---------------+
+																  |					src_1-->src filesink  |
+																  +-------------------+	  +---------------+
 
 
 How to Run main.c
