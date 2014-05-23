@@ -18,7 +18,7 @@ main.c have an problem:
 How to Run main.c
 =========
 
-1. You need to prepare an webm file, and rename it to "input.webm" with same folder to main.c
+1. You need to prepare an webm file, and rename it to "input.webm" with same folder to main.c [1]
 2. compile main.c with command: g++ -g -Wall main.c -o main $(pkg-config --cflags --libs gstreamer-1.0 gstreamer-base-1.0)
 3. You will see the execuable file "main" at the current folder after step 2.
 4. run the file with command: ./main
@@ -62,3 +62,5 @@ Shell Script Usage
 2. play_video.sh: coulde play webm only contains video: sh play_video.sh video_file_name
 3. play_both.sh:  coulde play webm contains audio and video: sh play_both.sh webm_file_name
 
+Reference Links:
+1. Webm media file from gstreamer sdk: http://docs.gstreamer.com/media/sintel_trailer-480p.webm
