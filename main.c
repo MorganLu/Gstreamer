@@ -2,6 +2,7 @@
 #include <gst/base/gstbasesrc.h>
 #include <gst/base/gstbasesink.h>
 
+#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 #include <signal.h>
@@ -15,13 +16,13 @@
 
 static GstElement 
     *pipeline,
-    *srcElnt,    		// element - filesrc
-    *queElnt[3],		// element - queue
-    *demuxElnt,         // element - matroskademux
-    *muxElnt,           // element - matroskamux
-    *selectorElnt,      // element - output selector
-    *fakesinkElnt,      // element - fakesink
-    *filesinkElnt;      // element - filesink
+    *srcElnt,    	// element - filesrc
+    *queElnt[3],	// element - queue
+    *demuxElnt,     // element - matroskademux
+    *muxElnt,       // element - matroskamux
+    *selectorElnt,  // element - output selector
+    *fakesinkElnt,  // element - fakesink
+    *filesinkElnt;  // element - filesink
         
 
 // srcPad[0]->fakesinkElnt, srcPad[1]->filesinkElnt
